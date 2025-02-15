@@ -278,8 +278,8 @@ step_start "Frontend" "Building" "Built"
   cd ./frontend
   export NODE_ENV=development
   yarn cache clean --silent --force >$__OUTPUT
-  yarn install --silent --network-timeout=30000 >$__OUTPUT 
-  yarn build >$__OUTPUT 
+  yarn install --silent --network-timeout=30000 >$__OUTPUT
+  yarn build >$__OUTPUT
   cp -r dist/* /app/frontend
   cp -r app-images/* /app/frontend/images
 
@@ -291,7 +291,7 @@ step_start "Backend" "Initializing" "Initialized"
   fi
   cd /app
   export NODE_ENV=development
-  yarn install --silent --network-timeout=30000 >$__OUTPUT 
+  yarn install --silent --network-timeout=30000 >$__OUTPUT
 
 step_start "Services" "Starting" "Started"
   printf "$EPS_SERVICE_DATA\n" | tee $EPS_SERVICE_FILE >$__OUTPUT
